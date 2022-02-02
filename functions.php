@@ -9,6 +9,17 @@ if ( ! function_exists( 'wordpresstheme_setup' ) ) :
         add_theme_support( 'post-thumbnails' );
 
         add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
+
+        add_theme_support( 
+            'custom-logo',
+            array(
+                'height' => 100,
+                'width' => 300,
+                'flex-width' => true,
+                'flex-height' => true,
+                'unlink-homepage-logo' => true,
+            )
+        );
     }
 
 endif;
