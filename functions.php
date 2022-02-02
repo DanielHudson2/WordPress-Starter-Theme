@@ -8,18 +8,20 @@ if ( ! function_exists( 'wordpresstheme_setup' ) ) :
 
         add_theme_support( 'post-thumbnails' );
 
-        add_theme_support( 'post-formats', array ( 'aside', 'gallery', 'quote', 'image', 'video' ) );
-
-        add_theme_support( 
-            'custom-logo',
-            array(
-                'height' => 100,
-                'width' => 300,
-                'flex-width' => true,
-                'flex-height' => true,
-                'unlink-homepage-logo' => true,
-            )
-        );
+        add_theme_support(
+			'post-formats',
+			array(
+				'link',
+				'aside',
+				'gallery',
+				'image',
+				'quote',
+				'status',
+				'video',
+				'audio',
+				'chat',
+			)
+		);
     }
 
 endif;
@@ -31,3 +33,14 @@ foreach ( glob( get_template_directory() . "/inc/*.php") as $function ) {
     $function = basename($function);
     require get_template_directory() . '/inc/' . $function;
 }
+
+add_theme_support(
+    'custom-logo',
+    array(
+        'height'               => 100,
+        'width'                => 300,
+        'flex-width'           => true,
+        'flex-height'          => true,
+        'unlink-homepage-logo' => true,
+    )
+);

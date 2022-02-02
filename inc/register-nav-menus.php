@@ -1,5 +1,6 @@
-<!-- Register Nav Menus -->
 <?php
+
+// Register Nav Menus
 
 register_nav_menus( array(
 
