@@ -10,6 +10,18 @@ import browserSync from "browser-sync";
 const PRODUCTION = yargs.argv.prod;
 const sass = require('gulp-sass')(require('sass'));
 
+const server = browserSync.create();
+export const serve = done => {
+  server.init({
+    proxy: "http://wordpressdevsite.local/" // put your local website link here
+  });
+  done();
+};
+export const reload = done => {
+  server.reload();
+  done();
+};
+
 export const styles = () => {
   return src('src/scss/styles.scss')
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
@@ -45,18 +57,6 @@ export const watchForChanges = () => {
 }
 
 export const clean = () => del(['dist']);
-
-const server = browserSync.create();
-export const serve = done => {
-  server.init({
-    proxy: "http://wordpressdevsite.local/" // put your local website link here
-  });
-  done();
-};
-export const reload = done => {
-  server.reload();
-  done();
-};
 
 export const dev = series(clean, parallel(styles, images, js, copy), serve, watchForChanges)
 export const build = series(clean, parallel(styles, images, js, copy))
