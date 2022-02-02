@@ -1,0 +1,9 @@
+.header__navigation {
+  display: flex;
+}
+
+body {
+  background-color: #f03;
+  display: flex;
+}
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvX2hlYWRlci5zY3NzIiwic3R5bGVzLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUk7RUFDSTs7O0FDQVI7RUFDRSxrQkFITztFQUlQIiwiZmlsZSI6InN0eWxlcy5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuaGVhZGVyIHtcclxuXHJcbiAgICAmX19uYXZpZ2F0aW9uIHtcclxuICAgICAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgfVxyXG59IiwiQGltcG9ydCAnLi9jb21wb25lbnRzL2hlYWRlcic7XHJcbiRjb2xvdXI6ICNmMDM7XHJcblxyXG5ib2R5IHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAkY29sb3VyO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn0iXX0= */
