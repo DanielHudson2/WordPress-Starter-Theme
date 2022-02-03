@@ -13,7 +13,8 @@ const sass = require('gulp-sass')(require('sass'));
 const server = browserSync.create();
 export const serve = done => {
   server.init({
-    proxy: "http://wordpressdevsite.local/" // put your local website link here
+    proxy: "https://wordpressdevsite.local/", // put your local website link here
+    https: true
   });
   done();
 };
