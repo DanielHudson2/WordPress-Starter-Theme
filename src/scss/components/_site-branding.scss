@@ -1,0 +1,12 @@
+/**
+* SITE-BRANDING
+**/
+
+.c-site-branding {
+    display: flex;
+
+    &__logo {
+        width: rem-calc(200);
+        padding: rem-calc(10 20 10 20);
+    }
+}
