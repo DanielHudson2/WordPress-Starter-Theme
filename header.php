@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
 
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -9,5 +9,5 @@
     </head>
 
     <body>
-
+        
         <?php get_template_part( 'template-parts/header/site-header' ); ?>
