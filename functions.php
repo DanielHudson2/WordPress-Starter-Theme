@@ -29,9 +29,12 @@ endif;
 add_action( 'after_theme_setup', 'wordpresstheme_setup' );
 
 // Include Functions
-foreach ( glob( get_template_directory() . "/inc/*.php") as $function ) {
-    $function = basename($function);
-    require get_template_directory() . '/inc/' . $function;
+foreach ( glob( dirname(__FILE__) . '/inc/*.php') as $filename ) {
+    include_once $filename;
+}
+
+foreach ( glob( dirname(__FILE__) . '/inc/custom/*.php') as $filename ) {
+    include_once $filename;
 }
 
 add_theme_support(
