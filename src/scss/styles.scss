@@ -1,3 +1,13 @@
+// Core
+@import './core/settings';
+@import './core/mixins';
+@import './core/functions/rem-calc';
+
+// Variables
+@import './variables';
+@import './fonts';
+
+// Components
 @import './components/site-header';
 @import './components/site-branding';
 @import './components/primary-navigation';
