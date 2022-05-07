@@ -25,7 +25,7 @@
 
     // Calculate rem if units for $value is not rem or em
     @if unit($value) != 'rem' {
-        $value: strip-unit($value) / 16 * 1rem;
+        $value: calc(strip-unit($value) / 16 * 1rem);
     }
 
     // Turn 0rem into 0
@@ -37,5 +37,5 @@
 }
 
 @function strip-unit($num) {
-    @return $num / ($num * 0 + 1);
+    @return calc($num / ($num * 0 + 1));
 }
